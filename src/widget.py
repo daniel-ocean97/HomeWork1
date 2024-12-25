@@ -29,5 +29,3 @@ def get_date(date_need_to_format: str) -> str:
     formated_date.append(date_need_to_format_list[0])
     return ".".join(formated_date)
 
-
-print(get_date('2024-03-11T02:26:18.671407'))
