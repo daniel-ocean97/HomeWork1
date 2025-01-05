@@ -71,7 +71,7 @@ def test_sort_by_date_same_date() -> None:
     ]
 
 
-def test_sort_by_date_weong_date() -> None:
+def test_sort_by_date_wrong_date() -> None:
     assert (
         src.processing.sort_by_date(
             [
