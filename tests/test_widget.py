@@ -15,6 +15,7 @@ import src.widget
     ],
 )
 def test_mask_account_card(account_card: str, expected: str) -> None:
+    """Функция для тестирования _mask_account_card во всех возможных случаях"""
     assert src.widget.mask_account_card(account_card) == expected
 
 
@@ -28,4 +29,5 @@ def test_mask_account_card(account_card: str, expected: str) -> None:
     ],
 )
 def test_get_date(date_need_to_format: str, expected: str) -> None:
+    """Функция для тестирования get_date во всех возможных случаях"""
     assert src.widget.get_date(date_need_to_format) == expected
