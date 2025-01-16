@@ -8,10 +8,10 @@ def log(filename=None):
             if filename is None:
                 try:
                     result = func(*args, **kwargs)
-                    print(f"{func.__name__} ok\n")
+                    print(f"{func.__name__} ok")
                     return result
                 except Exception as e:
-                    print(f"{func.__name__} error: {type(e).__name__}. Inputs: {args}, {kwargs}/n")
+                    print(f"{func.__name__} error: {type(e).__name__}. Inputs: {args}, {kwargs}")
             else:
                 try:
                     result = func(*args, **kwargs)
@@ -26,4 +26,8 @@ def log(filename=None):
         return wrapper
     return decorator
 
+@log(filename=None)
+def error():
+    raise ValueError
 
+error()
