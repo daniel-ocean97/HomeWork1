@@ -9,7 +9,7 @@ def test_show_amount_in_rub():
 
 
 @patch("requests.request")
-def test_show_amount_in_rub(mock_request):
+def test_show_amount_in_rub_with_api(mock_request):
     """Тест функции show_amount_in_rub в случае когда требуется обращение к API"""
     mock_response = Mock()
     mock_response.json.return_value = {"result": 10.023}

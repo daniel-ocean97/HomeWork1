@@ -10,7 +10,7 @@ def read_from_json(path_to_json: str):
     try:
         with open(path_to_json, "r", encoding="utf-8") as f:
             data = json.load(f)
-    except:
+    except Exception:
         return data
     return data
 

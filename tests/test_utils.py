@@ -1,7 +1,7 @@
 from src.utils import read_from_json
 
 
-def test_read_from_json():
+def test_read_from_json_base():
     """Проверяет работу функции read_from_json в базовом случае"""
     assert read_from_json("../data/test.json") == [
         {
