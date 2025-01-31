@@ -6,16 +6,17 @@ import csv
 data_directory = os.path.join("..", "data")
 csv_file_path = os.path.join(data_directory, "transactions.csv")
 
+
 def reading_from_csv(path_to_file):
-    """ Функция для чтения данных из csv файла """
+    """Функция для чтения данных из csv файла"""
     result = []
-    with open(path_to_file, 'r', encoding='utf-8') as file:
+    with open(path_to_file, "r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         for row in reader:
             temp_res = {}
             for key, value in row.items():
-                keys = key.split(';')
-                values = value.split(';')
+                keys = key.split(";")
+                values = value.split(";")
                 for i in range(len(keys)):
                     temp_res[keys[i]] = values[i]
             result.append(temp_res)
@@ -25,8 +26,9 @@ def reading_from_csv(path_to_file):
 
 exel_file_path = os.path.join(data_directory, "transactions_excel.xlsx")
 
-def reading_from_exel(path_to_file):
-    """ Функция для чтения данных из excel файла """
+
+def reading_from_exсel(path_to_file):
+    """Функция для чтения данных из excel файла"""
     excel_data = pd.read_excel(path_to_file)
     dict_data = excel_data.to_dict()
     file_len = len(excel_data)
@@ -39,4 +41,4 @@ def reading_from_exel(path_to_file):
     return result
 
 
-print(reading_from_exel(exel_file_path))
+
