@@ -1,5 +1,6 @@
+from unittest.mock import Mock, patch
+
 from src.external_api import show_amount_in_rub
-from unittest.mock import patch, Mock
 
 
 def test_show_amount_in_rub():
