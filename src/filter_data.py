@@ -3,15 +3,14 @@ from collections import Counter
 
 
 def filter_by_description(transactions, search_string):
-    pattern = re.compile(fr'\b{search_string}\b')
     result = []
     for transaction in transactions:
-        if re.search(pattern, transaction["description"]):
+        if re.search(fr'\b{search_string}\b', transaction["description"], flags=re.IGNORECASE):
             result.append(transaction)
     return result
 
 
-def state_counter(transactions, categories):
+def categories_counter(transactions, categories):
     all_categories = []
     for category in categories:
         for transaction in transactions:
