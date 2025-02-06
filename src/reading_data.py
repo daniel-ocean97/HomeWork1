@@ -1,7 +1,7 @@
-import pandas as pd
-import os
 import csv
+import os
 
+import pandas as pd
 
 data_directory = os.path.join("..", "data")
 csv_file_path = os.path.join(data_directory, "transactions.csv")
@@ -24,6 +24,8 @@ def reading_from_csv(path_to_file):
     return result
 
 
+# print(reading_from_csv(csv_file_path))
+
 exel_file_path = os.path.join(data_directory, "transactions_excel.xlsx")
 
 
@@ -41,4 +43,4 @@ def reading_from_exсel(path_to_file):
     return result
 
 
-
+CONST = reading_from_csv(csv_file_path)

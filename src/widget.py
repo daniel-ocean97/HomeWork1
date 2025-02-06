@@ -22,12 +22,6 @@ def get_date(date_need_to_format: str) -> str:
     date_need_to_format_list = date_need_to_format.split("-")
     if len(date_need_to_format_list) != 3:
         return "Неверный формат строки"
-    if (
-        len(date_need_to_format_list[0]) != 4
-        or len(date_need_to_format_list[1]) != 2
-        or len(date_need_to_format_list[2]) != 18
-    ):
-        return "Неверный формат строки"
     formated_date.append(date_need_to_format_list[2][:2])
     formated_date.append(date_need_to_format_list[1])
     formated_date.append(date_need_to_format_list[0])

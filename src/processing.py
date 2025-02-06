@@ -6,6 +6,8 @@ import src.widget
 def filter_by_state(client_data: list[dict], state: str = "EXECUTED") -> Union[list[dict], str]:
     """Функция фильтрует список по указанному значение state"""
     for data in client_data:
+        if data == {}:
+            continue
         if "state" not in data:
             return "Некорректный формат ввода"
     return [i for i in client_data if i["state"] == state]

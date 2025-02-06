@@ -1,5 +1,6 @@
-import src.generators
 import pytest
+
+import src.generators
 
 
 def test_filter_by_currency_usd(trans_data):

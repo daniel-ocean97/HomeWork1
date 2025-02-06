@@ -1,6 +1,8 @@
+from unittest.mock import mock_open, patch
+
 import pandas as pd
-from unittest.mock import patch, mock_open
-from src.reading_data import reading_from_exсel, reading_from_csv
+
+from src.reading_data import reading_from_csv, reading_from_exсel
 
 
 def test_reading_from_exсel():
